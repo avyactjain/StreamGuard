@@ -1,0 +1,21 @@
+[package]
+name = "stream-guard"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "stream-guard"
+path = "src/main.rs"
+
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+thiserror = "1.0"
+async-trait = "0.1.88"
+async-stream = "0.3.6"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
